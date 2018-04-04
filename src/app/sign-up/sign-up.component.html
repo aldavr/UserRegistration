@@ -5,34 +5,39 @@
         <h2>User Registration</h2>
       </div>
     </div>
-    <form class="col s12 white">
+    <form class="col s12 white" #userRegistrationForm="ngForm">
       <!-- User Name and Password row -->
       <div class="row">
         <div class="input-field col s6">
-          <input id="user_name" type="text" class="validate">
-          <label for="first_name">User Name</label>
+          <input id="user_name" type="text" class="validate" #UserName="ngModel" [(ngModel)]="user.UserName" required>
+          <label for="first_name" data-error="User Name required!">User Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
+          <input id="password" type="password" class="validate" #Password="ngModel" [(ngModel)]="user.Password" required>
+          <label for="password" data-error="Password required!">Password</label>
         </div>
       </div>
       <!-- Email row -->
       <div class="row">
         <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
+          <input id="email" type="email" class="validate" #Email="ngModel" [(ngModel)]="user.Email">
+          <label for="email" data-error="Invalid Email!">Email</label>
         </div>
       </div>
       <!-- First Name and Last Name row -->
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
+          <input id="first_name" type="text" class="validate" #FirstName="ngModel" [(ngModel)]="user.FirstName">
           <label for="first_name">First Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
+          <input id="last_name" type="text" class="validate" #LastName="ngModel" [(ngModel)]="user.LastName">
           <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <button [disabled]="!userRegistrationForm.valid" class="btn-large btn-submit">Submit</button>
         </div>
       </div>
     </form>
