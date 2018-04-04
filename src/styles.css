@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+div.sm-jumbotron {
+  margin: 0px;
+  padding: 2rem;
+  background-color: #38547b;
+  color: #fff;
+}
