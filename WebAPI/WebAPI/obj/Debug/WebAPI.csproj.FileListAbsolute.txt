@@ -1,0 +1,6 @@
+C:\Projects\UserRegistration\WebAPI\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\UserRegistration\WebAPI\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\UserRegistration\WebAPI\WebAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\UserRegistration\WebAPI\WebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Projects\UserRegistration\WebAPI\WebAPI\bin\roslyn\System.IO.Compression.dll
+C:\Projects\UserRegistration\WebAPI\WebAPI\bin\roslyn\VBCSCompiler.exe
