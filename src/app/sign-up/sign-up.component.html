@@ -5,34 +5,34 @@
         <h2>User Registration</h2>
       </div>
     </div>
-    <form class="col s12 white" #userRegistrationForm="ngForm">
+    <form class="col s12 white" #userRegistrationForm="ngForm" (ngSubmit)="OnSubmit(userRegistrationForm)">
       <!-- User Name and Password row -->
       <div class="row">
         <div class="input-field col s6">
-          <input id="user_name" type="text" class="validate" #UserName="ngModel" [(ngModel)]="user.UserName" required>
-          <label for="first_name" data-error="User Name required!">User Name</label>
+          <input id="user_name" type="text" class="validate" #UserName="ngModel" [(ngModel)]="user.UserName" [ngModelOptions]="{standalone: true}" required>
+          <label data-error="User Name required!">User Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="password" type="password" class="validate" #Password="ngModel" [(ngModel)]="user.Password" required>
-          <label for="password" data-error="Password required!">Password</label>
+          <input id="password" type="password" class="validate" #Password="ngModel" [(ngModel)]="user.Password" [ngModelOptions]="{standalone: true}" required>
+          <label data-error="Password required!">Password</label>
         </div>
       </div>
       <!-- Email row -->
       <div class="row">
         <div class="input-field col s12">
-          <input id="email" type="email" class="validate" #Email="ngModel" [(ngModel)]="user.Email">
-          <label for="email" data-error="Invalid Email!">Email</label>
+          <input id="email" type="email" class="validate" #Email="ngModel" [(ngModel)]="user.Email" [ngModelOptions]="{standalone: true}">
+          <label data-error="Invalid Email!">Email</label>
         </div>
       </div>
       <!-- First Name and Last Name row -->
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate" #FirstName="ngModel" [(ngModel)]="user.FirstName">
-          <label for="first_name">First Name</label>
+          <input id="first_name" type="text" class="validate" #FirstName="ngModel" [(ngModel)]="user.FirstName" [ngModelOptions]="{standalone: true}">
+          <label>First Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" #LastName="ngModel" [(ngModel)]="user.LastName">
-          <label for="last_name">Last Name</label>
+          <input id="last_name" type="text" class="validate" #LastName="ngModel" [(ngModel)]="user.LastName" [ngModelOptions]="{standalone: true}">
+          <label>Last Name</label>
         </div>
       </div>
       <div class="row">
